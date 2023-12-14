@@ -1,0 +1,534 @@
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color: #ebebeb;
+  --primary-color: #2648db;
+  --secondary-color: #f03919;
+  --section-bg-color: #ffffff;
+  --custom-btn-bg-color: #7c1ceb;
+  --custom-btn-bg-hover-color: #e7472b;
+  --dark-color: #000000;
+  --p-color: #1a1919;
+  --border-color: #3c3d7e;
+  --link-hover-color: #e76f51;
+
+  --h1-font-size: 68px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 20px;
+  --btn-font-size: 16px;
+  --form-btn-font-size: 18px;
+  --menu-font-size: 16px;
+
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
+
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+/* html,
+body {
+  font-family: monospace;
+} */
+/* .custom-header {
+  background-color: var(--white-color);
+  height: 90px;
+} */
+/* ..........................page-header start............... */
+.logo-head {
+  text-transform: uppercase;
+}
+.logo-head h2 {
+  color: var(--primary-color);
+}
+.logo-head span {
+  color: var(--secondary-color);
+}
+.page-header {
+  background-color: var(--section-bg-color);
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 126px 0px 120px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.page-header:after {
+  content: '';
+  background-image: url(../assets/baner-dec-left.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 193px;
+  height: 467px;
+}
+
+.page-header:before {
+  content: '';
+  background-image: url(../assets/baner-dec-right.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 98px;
+  height: 290px;
+}
+
+.page-header .left-content h6 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.page-header .left-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #2a2a2a;
+  line-height: 62px;
+}
+
+.page-header .left-content h2 em {
+  color: #03a4ed;
+  font-style: normal;
+}
+
+.page-header .left-content h2 span {
+  color: #fe3f40;
+}
+.main-banner-image {
+  width: 110%;
+  overflow: hidden;
+  border-radius: 49% 51% 50% 50% / 34% 63% 37% 66%;
+}
+.float {
+  animation-name: anti-float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes anti-float {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+/* ..........................page-header responsiveness start............... */
+
+@media all and (max-width: 500px) {
+  .main-banner-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 49% 51% 50% 50% / 34% 63% 37% 66%;
+  }
+}
+@media all and (max-width: 500px) {
+  .left-content {
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+  }
+}
+/* ..........................page-header responsiveness end............... */
+
+/* ..........................introduction section start............... */
+.introduction {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.introduction ::before {
+  content: ' ';
+  background-image: url(../assets/high-voltage-post-high-voltage-tower\ \(1\).jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(30%);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px; */
+}
+.introduction .custom-intro em {
+  color: var(--secondary-color);
+}
+.introduction .custom-intro span {
+  color: var(--primary-color);
+}
+
+/* ..........................introduction section ends............... */
+/* ..........................nature section starts............... */
+.nature {
+  color: white;
+  height: 110%;
+  position: relative;
+}
+.nature ::before {
+  content: '';
+  background-image: url(../assets/nature\ background.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* filter: brightness(30%); */
+  filter: brightness(20%);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.nature .custom-nature .nature-red-text {
+  color: var(--secondary-color);
+  font-weight: bolder;
+}
+.nature .custom-nature .nature-company {
+  color: var(--primary-color);
+  font-family: cursive;
+}
+.nature .custom-nature .nature-center-image {
+  border-radius: 25px;
+  width: 100%;
+}
+.nature-twin {
+  border-radius: 25px;
+  max-height: 550px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.nature .custom-nature .nature-twin :hover {
+  transform: scale(1.2);
+}
+.nature .custom-nature .nature-image {
+  transition: all 0.3s;
+}
+
+@media all and (max-width: 550px) {
+  .nature .custom-nature .nature-center-image {
+    width: 50%;
+  }
+}
+@media all and (max-width: 900px) {
+  .nature {
+    height: 110%;
+  }
+}
+/* ..........................nature section ends .................... */
+
+/* .....................services section start.............. */
+
+.services {
+  height: 100%;
+}
+
+/*.....................services section ends.............. */
+
+/* ............................job executed section start....................... */
+
+.jobs-executed {
+  background: radial-gradient(rgb(87, 30, 30), rgb(1, 1, 0));
+  color: white;
+}
+.jobs-executed .custom-job .job-head {
+  font-size: xx-large;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+/* ............................job executed section ends....................... */
+.custom-shape-divider-bottom-1699588747 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1699588747 svg {
+  display: block;
+  width: calc(126% + 1.3px);
+  height: 191px;
+}
+
+.custom-shape-divider-bottom-1699588747 .shape-fill {
+  fill: #0c08ec;
+}
+
+/* ..........................counter section starts............... */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* * {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+} */
+
+.counter-area {
+  /* min-height: 5%; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  /* font-smoothing: antialiased; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  background: linear-gradient(to right, #0c08ec, #2f0743) !important;
+}
+
+.cd__main {
+  background: #fff;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cd__main {
+  display: flex;
+  /* width: 100%; */
+}
+
+/* @media only screen and (min-width: 1360px) {
+  .cd__main {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+  }
+}  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.cd__main {
+  background: linear-gradient(to right, #0c08ec, #2f0743) !important;
+  /* min-height: 720px; */
+  /* item-align: center; */
+  color: #fff;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+/* ..........................counter section ends............... */
+
+/*---------------------------------------
+  CONTACT               
+-----------------------------------------*/
+.contact-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(188, 108, 37, 1)
+    ),
+    url('../images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.google-map {
+  border-radius: var(--border-radius-medium);
+  filter: grayscale(100);
+}
+
+.contact-block-wrap {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  padding: 0;
+  min-height: 200px;
+}
+
+.contact-block {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-medium);
+  transform: rotate(8deg);
+  height: 100%;
+  padding: 20px 40px;
+}
+
+.contact-block h6 {
+  transform: rotate(-8deg);
+}
+
+.contact-block .custom-icon {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-large);
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-block strong {
+  display: block;
+  color: var(--white-color);
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/*---------------------------------------
+  CUSTOM FORM               
+-----------------------------------------*/
+.custom-form .form-control {
+  color: var(--p-color);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  box-shadow: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.custom-form .form-control:hover,
+.custom-form .form-control:focus {
+  background: var(--primary-color);
+  border-color: transparent;
+}
+
+.custom-form .form-label {
+  color: var(--white-color);
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.custom-form button[type='submit'] {
+  background: var(--custom-btn-bg-color);
+  border: none;
+  border-radius: 25px;
+  color: var(--white-color);
+  font-size: var(--form-btn-font-size);
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+
+.custom-form button[type='submit']:hover,
+.custom-form button[type='submit']:focus {
+  background: var(--white-color);
+  border-color: transparent;
+  color: var(--primary-color);
+}
+
+.contact-form .form-control,
+.booking-form .form-control {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.booking-form .form-control {
+  color: var(--white-color);
+}
+
+.custom-form input::-webkit-input-placeholder,
+.custom-form textarea::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+/* ----------------------------------------------------------------------
+
+ ........................... about-us ...................................                                        
+
+---------------------------------------------------------------------- */
+.About-us .about-head {
+  /* background-image: url(../assets/high-voltage-post-high-voltage-tower\ \(1\).jpg); */
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  height: 120px;
+}
+
+.manager-image {
+  float: left;
+  border-radius: 15px;
+}
+.about-text-right {
+  display: inline;
+}
+
+/* ..........................footer section ............... */
+
+.site-footer {
+  background-color: var(--primary-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.site-footer strong {
+  color: var(--white-color);
+}
+
+.site-footer p,
+.site-footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--btn-font-size);
+}
+
+.site-footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--btn-font-size);
+  transition: all 0.3s;
+}
+
+.site-footer-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+}
+
+.copyright-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--menu-font-size);
+}
+
+.copyright-text a {
+  color: rgba(255, 200, 160, 0.75);
+}
